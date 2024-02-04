@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 400px;
+    
+    
+}
+
+.card-image{
+    width: 350px;
+    border-radius: 20px;
+    transform: translateY(-30px);
+}
+
+.card-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    background: #fff;
+    text-align: justify;
+    height: 0px;
+    overflow: hidden;
+    color: #fff;
+    min-height: 0;
+    transition: color .4s .4s, padding .4s, min-height .4s;
+}
+.card:hover .card-description {
+    height: initial;
+    min-height: 100px;
+    padding: 20px 35px;
+    color: #000;
+}
+
+.card:hover .stats-container {
+    opacity: 1;
+}
+.stats-container {
+    opacity: 0;
+    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 1.5s, 0.6s linear;
+    background: #54b948;
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+.dog {
+    box-shadow: -1px 15px 45px -12px #54b948;
+}
+
+.cat {
+    box-shadow: -1px 15px 45px -12px #f8a2de;
+}
+
+.parrot {
+    box-shadow: -1px 15px 45px -12px #bc654a;
+}
+
+.cat-container {
+    background: #333; 
+}
+
+.parrot-container {
+    background: #784421;
+}
+
+.stats-container > div {
+    padding: 10px 20px;
+}
+
+.lifespan {
+    border-right: 2px solid #fff;
+}
+
+.mass {
+    border-right: 2px solid #fff;
+}
+
+.label {
+    text-align: center;
+    font-weight: bold;
+}
+
+.value {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 20%;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+    background: #000;
+    
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .cards {
+        flex-direction: column;
+        height: initial;
+    }
+    
+    .card {
+        margin-top: 35px;
+        gap: 20px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+}
